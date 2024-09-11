@@ -491,6 +491,8 @@ if __name__ == '__main__':
     model_type = config['TYPE']
     visual_net, evaluator = get_models(config['MODEL'], args, model_type, ckpt_path)
 
+    # print(f"visual_net===========: {visual_net.state_dict()}")
+
     main(dataloaders, visual_net, evaluator, base_logger, writer, config['MODEL'], args, model_type, ckpt_path)
 
     writer.close()

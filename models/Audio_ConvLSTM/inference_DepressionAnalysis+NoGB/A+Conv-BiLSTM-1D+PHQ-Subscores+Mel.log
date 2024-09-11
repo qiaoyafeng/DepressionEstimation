@@ -98,3 +98,204 @@ Participant gender Analysis:
       Precision: 0.6000
       Recall: 0.4286
       F1-score: 0.5000
+------------------------------------------------------Depression Detection with mix Audio(Mel), Conv-BiLSTM-1D, PHQ-Subscores, CrossEntropy with weights, ASAM------------------------------------------------------
+------------------------------------------------------Depression Detection with mix Audio(Mel), Conv-BiLSTM-1D, PHQ-Subscores, CrossEntropy with weights, ASAM------------------------------------------------------
+Epoch: 0  Current Best Test for f1-score: 0 at epoch 0
+Epoch: 0  Current Best Test for accuracy: 0 at epoch 0
+  End of test:
+  | time:    2.564s | LR: 0.001000 | Average Loss:      nan | Accuracy: 56.00% (14/25) |
+  Output Scores:
+  - Confusion Matrix:
+    -----------------------
+    | TP:    3 | FP:    3 |
+    -----------------------
+    | FN:    8 | TN:   11 |
+    -----------------------
+  - Classification:
+      TPR/Sensitivity: 0.2727
+      TNR/Specificity: 0.7857
+      Precision: 0.5000
+      Recall: 0.2727
+      F1-score: 0.3529
+  - Regression:
+      MAE:  7.6000
+      MSE: 91.7600
+      RMSE:  9.5791
+      R2: -0.3199
+
+  - Correlation:
+      Spearman correlation: -0.017905
+
+Gender Analysis based on clips:
+  Female - Number of clips: 7, depressed: 7, non-depressed: 0
+    - Confusion Matrix ( acc: 14.29% (1/7) ):
+      -----------------------
+      | TP:    1 | FP:    0 |
+      -----------------------
+      | FN:    6 | TN:    0 |
+      -----------------------
+  - Classification:
+      TPR/Sensitivity: 0.1429
+      TNR/Specificity:    nan
+      Precision: 1.0000
+      Recall: 0.1429
+      F1-score: 0.2500
+  Male - Number of clips: 18, depressed: 4, non-depressed: 14
+    - Confusion Matrix ( acc: 72.22% (13/18) ):
+      -----------------------
+      | TP:    2 | FP:    3 |
+      -----------------------
+      | FN:    2 | TN:   11 |
+      -----------------------
+
+  - Classification:
+      TPR/Sensitivity: 0.5000
+      TNR/Specificity: 0.7857
+      Precision: 0.4000
+      Recall: 0.5000
+      F1-score: 0.4444
+Participant Analysis:
+   Binary GT of Participants: [0, 0, 1, 1]
+  Prediction of Participants: [0, 0, 0, 1]
+    - Confusion Matrix ( acc: 75.00% (3/4) ):
+      -----------------------
+      | TP:    1 | FP:    0 |
+      -----------------------
+      | FN:    1 | TN:    2 |
+      -----------------------
+
+  - Classification:
+      TPR/Sensitivity: 0.5000
+      TNR/Specificity: 1.0000
+      Precision: 1.0000
+      Recall: 0.5000
+      F1-score: 0.6667
+Participant gender Analysis:
+  Female - Number of participants: 1, depressed: 1, non-depressed: 0
+    - Confusion Matrix ( acc:  0.00% (0/1) ):
+      -----------------------
+      | TP:    0 | FP:    0 |
+      -----------------------
+      | FN:    1 | TN:    0 |
+      -----------------------
+
+  - Classification:
+      TPR/Sensitivity: 0.0000
+      TNR/Specificity:    nan
+      Precision:    nan
+      Recall: 0.0000
+      F1-score:    nan
+  Male - Number of participants: 3, depressed: 1, non-depressed: 2
+    - Confusion Matrix ( acc: 100.00% (3/3) ):
+      -----------------------
+      | TP:    1 | FP:    0 |
+      -----------------------
+      | FN:    0 | TN:    2 |
+      -----------------------
+
+  - Classification:
+      TPR/Sensitivity: 1.0000
+      TNR/Specificity: 1.0000
+      Precision: 1.0000
+      Recall: 1.0000
+      F1-score: 1.0000
+------------------------------------------------------Depression Detection with mix Audio(Mel), Conv-BiLSTM-1D, PHQ-Subscores, CrossEntropy with weights, ASAM------------------------------------------------------
+Epoch: 0  Current Best Test for f1-score: 0 at epoch 0
+Epoch: 0  Current Best Test for accuracy: 0 at epoch 0
+  End of test:
+  | time:    2.539s | LR: 0.001000 | Average Loss:      nan | Accuracy: 56.00% (14/25) |
+  Output Scores:
+  - Confusion Matrix:
+    -----------------------
+    | TP:    3 | FP:    3 |
+    -----------------------
+    | FN:    8 | TN:   11 |
+    -----------------------
+  - Classification:
+      TPR/Sensitivity: 0.2727
+      TNR/Specificity: 0.7857
+      Precision: 0.5000
+      Recall: 0.2727
+      F1-score: 0.3529
+  - Regression:
+      MAE:  7.6000
+      MSE: 91.7600
+      RMSE:  9.5791
+      R2: -0.3199
+
+  - Correlation:
+      Spearman correlation: -0.017905
+
+Gender Analysis based on clips:
+  Female - Number of clips: 7, depressed: 7, non-depressed: 0
+    - Confusion Matrix ( acc: 14.29% (1/7) ):
+      -----------------------
+      | TP:    1 | FP:    0 |
+      -----------------------
+      | FN:    6 | TN:    0 |
+      -----------------------
+  - Classification:
+      TPR/Sensitivity: 0.1429
+      TNR/Specificity:    nan
+      Precision: 1.0000
+      Recall: 0.1429
+      F1-score: 0.2500
+  Male - Number of clips: 18, depressed: 4, non-depressed: 14
+    - Confusion Matrix ( acc: 72.22% (13/18) ):
+      -----------------------
+      | TP:    2 | FP:    3 |
+      -----------------------
+      | FN:    2 | TN:   11 |
+      -----------------------
+
+  - Classification:
+      TPR/Sensitivity: 0.5000
+      TNR/Specificity: 0.7857
+      Precision: 0.4000
+      Recall: 0.5000
+      F1-score: 0.4444
+Participant Analysis:
+   Binary GT of Participants: [0, 0, 1, 1]
+  Prediction of Participants: [0, 0, 0, 1]
+    - Confusion Matrix ( acc: 75.00% (3/4) ):
+      -----------------------
+      | TP:    1 | FP:    0 |
+      -----------------------
+      | FN:    1 | TN:    2 |
+      -----------------------
+
+  - Classification:
+      TPR/Sensitivity: 0.5000
+      TNR/Specificity: 1.0000
+      Precision: 1.0000
+      Recall: 0.5000
+      F1-score: 0.6667
+Participant gender Analysis:
+  Female - Number of participants: 1, depressed: 1, non-depressed: 0
+    - Confusion Matrix ( acc:  0.00% (0/1) ):
+      -----------------------
+      | TP:    0 | FP:    0 |
+      -----------------------
+      | FN:    1 | TN:    0 |
+      -----------------------
+
+  - Classification:
+      TPR/Sensitivity: 0.0000
+      TNR/Specificity:    nan
+      Precision:    nan
+      Recall: 0.0000
+      F1-score:    nan
+  Male - Number of participants: 3, depressed: 1, non-depressed: 2
+    - Confusion Matrix ( acc: 100.00% (3/3) ):
+      -----------------------
+      | TP:    1 | FP:    0 |
+      -----------------------
+      | FN:    0 | TN:    2 |
+      -----------------------
+
+  - Classification:
+      TPR/Sensitivity: 1.0000
+      TNR/Specificity: 1.0000
+      Precision: 1.0000
+      Recall: 1.0000
+      F1-score: 1.0000

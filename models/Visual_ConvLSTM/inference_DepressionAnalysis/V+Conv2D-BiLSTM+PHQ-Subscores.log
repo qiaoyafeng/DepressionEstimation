@@ -98,3 +98,119 @@ Participant gender Analysis:
       Precision: 0.6667
       Recall: 0.5714
       F1-score: 0.6154
+------------------------------------------------------Depression Detection with visual features (key points & gaze direction), Conv2D-BiLSTM, PHQ-Subscores------------------------------------------------------
+Epoch: 0  Current Best Test for f1-score: 0 at epoch 0
+Epoch: 0  Current Best Test for accuracy: 0 at epoch 0
+  End of test:
+  | time:    2.706s | LR: 0.000100 | Average Loss:      nan | Accuracy: 88.00% (22/25) |
+  Output Scores:
+  - Confusion Matrix:
+    -----------------------
+    | TP:   10 | FP:    2 |
+    -----------------------
+    | FN:    1 | TN:   12 |
+    -----------------------
+  - Classification:
+      TPR/Sensitivity: 0.9091
+      TNR/Specificity: 0.8571
+      Precision: 0.8333
+      Recall: 0.9091
+      F1-score: 0.8696
+  - Regression:
+      MAE:  5.2800
+      MSE: 51.7600
+      RMSE:  7.1944
+      R2:  0.2555
+
+  - Correlation:
+      Spearman correlation: 0.696151
+
+Gender Analysis based on clips:
+  Female - Number of clips: 7, depressed: 7, non-depressed: 0
+------------------------------------------------------Depression Detection with visual features (key points & gaze direction), Conv2D-BiLSTM, PHQ-Subscores------------------------------------------------------
+Epoch: 0  Current Best Test for f1-score: 0 at epoch 0
+Epoch: 0  Current Best Test for accuracy: 0 at epoch 0
+  End of test:
+  | time:    2.682s | LR: 0.000100 | Average Loss:      nan | Accuracy: 88.00% (22/25) |
+  Output Scores:
+  - Confusion Matrix:
+    -----------------------
+    | TP:   10 | FP:    2 |
+    -----------------------
+    | FN:    1 | TN:   12 |
+    -----------------------
+  - Classification:
+      TPR/Sensitivity: 0.9091
+      TNR/Specificity: 0.8571
+      Precision: 0.8333
+      Recall: 0.9091
+      F1-score: 0.8696
+  - Regression:
+      MAE:  5.2800
+      MSE: 51.7600
+      RMSE:  7.1944
+      R2:  0.2555
+
+  - Correlation:
+      Spearman correlation: 0.696151
+
+Gender Analysis based on clips:
+  Female - Number of clips: 7, depressed: 7, non-depressed: 0
+------------------------------------------------------Depression Detection with visual features (key points & gaze direction), Conv2D-BiLSTM, PHQ-Subscores------------------------------------------------------
+Epoch: 0  Current Best Test for f1-score: 0 at epoch 0
+Epoch: 0  Current Best Test for accuracy: 0 at epoch 0
+  End of test:
+  | time:    2.786s | LR: 0.000100 | Average Loss:      nan | Accuracy: 44.00% (11/25) |
+  Output Scores:
+  - Confusion Matrix:
+    -----------------------
+    | TP:   11 | FP:   14 |
+    -----------------------
+    | FN:    0 | TN:    0 |
+    -----------------------
+  - Classification:
+      TPR/Sensitivity: 1.0000
+      TNR/Specificity: 0.0000
+      Precision: 0.4400
+      Recall: 1.0000
+      F1-score: 0.6111
+  - Regression:
+      MAE:  9.4000
+      MSE: 113.0800
+      RMSE: 10.6339
+      R2: -0.6266
+
+  - Correlation:
+      Spearman correlation:      nan
+
+Gender Analysis based on clips:
+  Female - Number of clips: 7, depressed: 7, non-depressed: 0
+------------------------------------------------------Depression Detection with visual features (key points & gaze direction), Conv2D-BiLSTM, PHQ-Subscores------------------------------------------------------
+Epoch: 0  Current Best Test for f1-score: 0 at epoch 0
+Epoch: 0  Current Best Test for accuracy: 0 at epoch 0
+  End of test:
+  | time:    2.633s | LR: 0.000100 | Average Loss:      nan | Accuracy: 44.00% (11/25) |
+  Output Scores:
+  - Confusion Matrix:
+    -----------------------
+    | TP:   11 | FP:   14 |
+    -----------------------
+    | FN:    0 | TN:    0 |
+    -----------------------
+  - Classification:
+      TPR/Sensitivity: 1.0000
+      TNR/Specificity: 0.0000
+      Precision: 0.4400
+      Recall: 1.0000
+      F1-score: 0.6111
+  - Regression:
+      MAE:  9.4000
+      MSE: 113.0800
+      RMSE: 10.6339
+      R2: -0.6266
+
+  - Correlation:
+      Spearman correlation:      nan
+
+Gender Analysis based on clips:
+  Female - Number of clips: 7, depressed: 7, non-depressed: 0

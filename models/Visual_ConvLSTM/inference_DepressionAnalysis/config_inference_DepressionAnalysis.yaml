@@ -1,15 +1,15 @@
 !!omap
 - OUTPUT_DIR: inference_DepressionAnalysis
 - SAVE_CONFIG_NAME: config_inference_DepressionAnalysis.yaml
-- CKPTS_DIR: /cvhci/temp/wpingcheng/ckpts_new/
+- CKPTS_DIR: E:\myworkspace\DepressionEstimation\models\Visual_ConvLSTM\model_weights
 - TYPE: V+Conv2D-BiLSTM+PHQ-Subscores
 - MANUAL_SEED: 1
 - LOG_TITLE: Depression Detection with visual features (key points & gaze direction),
     Conv2D-BiLSTM, PHQ-Subscores
 - DATA: !!omap
-  - TRAIN_ROOT_DIR: /cvhci/temp/wpingcheng/DAIC_WOZ-generated_database_V2/train/clipped_data/
-  - VALIDATION_ROOT_DIR: /cvhci/temp/wpingcheng/DAIC_WOZ-generated_database_V2/train/original_data/
-  - TEST_ROOT_DIR: /cvhci/temp/wpingcheng/DAIC_WOZ-generated_database_V2/test/clipped_data/
+  - TRAIN_ROOT_DIR: E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\DAIC_WOZ-generated_database_V2\train\clipped_data\
+  - VALIDATION_ROOT_DIR: E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\DAIC_WOZ-generated_database_V2\train\original_data\
+  - TEST_ROOT_DIR: E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\DAIC_WOZ-generated_database_V2\test\clipped_data\
   - USE_MEL_SPECTROGRAM: false
   - VISUAL_WITH_GAZE: true
   - PADDING:
@@ -21,10 +21,10 @@
   - PHQ_THRESHOLD: 10
   - EPOCHS: 1
   - WEIGHTS: !!omap
-    - TYPE: other
+    - TYPE: new
     - DATE:
     - PATH: model_weights
-    - NAME: V+Conv2D-BiLSTM+PHQ-Subscores+Soft_2022-03-15_170617_f1_score-0.6094.pt
+    - NAME: V+Conv2D-BiLSTM+PHQ-Subscores+improve_2024-09-11_081747_f1_score-0.8696.pt
     - CUSTOM_ABSOLUTE_PATH:
     - INCLUDED:
       - visual_net
