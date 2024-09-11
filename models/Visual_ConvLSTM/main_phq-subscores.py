@@ -104,7 +104,9 @@ def main(dataloaders, visual_net, evaluator, base_logger, writer, config, args, 
                 if mode == 'train' or mode == 'validation':
                     
                     # choose the right GT for criterion based on prediciton type
+                    # print(f"data: {data}")
                     gt = get_gt(data, config['EVALUATOR']['PREDICT_TYPE'])
+                    gt = torch.where(torch.isnan(gt), torch.tensor(0.0), gt)
 
                     # get dynamic weights for cross entropy loss if needed
                     if config['CRITERION']['USE_WEIGHTS']:
