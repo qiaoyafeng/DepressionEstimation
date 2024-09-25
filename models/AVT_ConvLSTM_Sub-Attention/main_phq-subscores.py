@@ -128,6 +128,7 @@ def main(dataloaders, visual_net, audio_net, text_net, evaluator, base_logger, w
                     
                     # choose the right GT for criterion based on prediciton type
                     gt = get_gt(data, config['EVALUATOR']['PREDICT_TYPE'])
+                    gt = torch.where(torch.isnan(gt), torch.tensor(0.0), gt)
 
                     # get dynamic weights for cross entropy loss if needed
                     if config['CRITERION']['USE_WEIGHTS']:
