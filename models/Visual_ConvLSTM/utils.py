@@ -439,7 +439,7 @@ def standard_confusion_matrix(gt, pred):
     -------
     ndarray - 2D
     """
-    [[tn, fp], [fn, tp]] = metrics.confusion_matrix(np.asarray(gt), np.asarray(pred))
+    [[tn, fp], [fn, tp]] = metrics.confusion_matrix(np.asarray(gt), np.asarray(pred), labels=[1, 0])
     return np.array([[tp, fp], [fn, tn]])
 
 

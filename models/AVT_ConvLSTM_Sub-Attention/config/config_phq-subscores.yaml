@@ -65,15 +65,15 @@
 
 OUTPUT_DIR: exp_AVT+ConvBiLSTM+PHQ-Subscores+Sub-Attention+Soft
 SAVE_CONFIG_NAME: config_AVT+ConvBiLSTM+PHQ-Subscores+Sub-Attention+Soft.yaml
-CKPTS_DIR: /cvhci/temp/wpingcheng/ckpts_fusion/
+CKPTS_DIR: E:\myworkspace\DepressionEstimation\models\AVT_ConvLSTM_Sub-Attention\model_weights
 TYPE: AVT+ConvBiLSTM+PHQ-Subscores+Sub-Attention+Soft
 MANUAL_SEED: 1
 LOG_TITLE: Depression Detection with audio + visual + text data, ConvBiLSTM, PHQ-Subscores, Fusion-Sub-Attention, KLDivLoss(soft-label), ASAM
 
 DATA:
-  TRAIN_ROOT_DIR: /cvhci/temp/wpingcheng/DAIC_WOZ-generated_database_V2/train/clipped_data/
-  VALIDATION_ROOT_DIR: /cvhci/temp/wpingcheng/DAIC_WOZ-generated_database_V2/train/original_data/
-  TEST_ROOT_DIR: /cvhci/temp/wpingcheng/DAIC_WOZ-generated_database_V2/test/clipped_data/
+  TRAIN_ROOT_DIR: E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\DAIC_WOZ-generated_database_V2\train\clipped_data\
+  VALIDATION_ROOT_DIR: E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\DAIC_WOZ-generated_database_V2\train\original_data\
+  TEST_ROOT_DIR: E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\DAIC_WOZ-generated_database_V2\test\clipped_data\
   USE_MEL_SPECTROGRAM: True
   VISUAL_WITH_GAZE: True
   PADDING:
@@ -86,11 +86,11 @@ MODEL:
   PHQ_THRESHOLD: 10
   EPOCHS: 100
   WEIGHTS:
-    TYPE: absolute_path        # ['new', 'last', 'absolute_path', others custom_type]
+    TYPE: new        # ['new', 'last', 'absolute_path', others custom_type]
     DATE:
     PATH: model_weights
     NAME:
-    CUSTOM_ABSOLUTE_PATH: /cvhci/temp/wpingcheng/ckpts_fusion/AVT+ConvBiLSTM+PHQ-Subscores+Sub-Attention+Soft/AVT+ConvBiLSTM+PHQ-Subscores+Sub-Attention+Soft_2022-03-24_225753_acc-82.6531.pt
+    CUSTOM_ABSOLUTE_PATH:
     INCLUDED: ['audio_net', 'visual_net', 'text_net', 'evaluator']
   VISUAL_NET:
     INPUT_DIM: 3

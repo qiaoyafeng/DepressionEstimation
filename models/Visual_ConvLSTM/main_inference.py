@@ -150,8 +150,8 @@ def main(dataloaders, visual_net, evaluator, base_logger, writer, config, args, 
                 # predict the final score
                 pred_score = compute_score(probs, config['EVALUATOR'], args)
                 phq_score_pred.extend([pred_score[i].item() for i in range(batch_size)])  # 1D list
-                phq_binary_pred.extend([1 if pred_score[i].item() >= config['PHQ_THRESHOLD'] else 0 for i in range(batch_size)])
-                # phq_binary_pred.extend([pred_score[i].item() for i in range(batch_size)])
+                # phq_binary_pred.extend([1 if pred_score[i].item() >= config['PHQ_THRESHOLD'] else 0 for i in range(batch_size)])
+                phq_binary_pred.extend([pred_score[i].item() for i in range(batch_size)])
                 
                 if mode == 'train':
                     # information per batch
@@ -177,11 +177,11 @@ def main(dataloaders, visual_net, evaluator, base_logger, writer, config, args, 
                 batch_number += 1
 
             # information per mode
-            print('PHQ Score prediction: {}'.format(phq_score_pred[:20]))
-            print('PHQ Score ground truth: {}'.format(phq_score_gt[:20]))
+            print('PHQ Score prediction: {}'.format(phq_score_pred[:100]))
+            print('PHQ Score ground truth: {}'.format(phq_score_gt[:100]))
 
-            print('PHQ Binary prediction: {}'.format(phq_binary_pred[:20]))
-            print('PHQ Binary ground truth: {}'.format(phq_binary_gt[:20]))
+            print('PHQ Binary prediction: {}'.format(phq_binary_pred[:100]))
+            print('PHQ Binary ground truth: {}'.format(phq_binary_gt[:100]))
 
             average_loss = total_loss / n_batches
             lr = scheduler.get_last_lr()[0]

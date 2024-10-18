@@ -72,25 +72,25 @@ LOG_TITLE: Depression Detection with visual features (key points & gaze directio
 
 DATA:
   TRAIN_ROOT_DIR: E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\DAIC_WOZ-generated_database_V2\train\clipped_data\
-  VALIDATION_ROOT_DIR: E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\DAIC_WOZ-generated_database_V2\train\original_data\
+  VALIDATION_ROOT_DIR: E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\DAIC_WOZ-generated_database_V2\train\clipped_data\
   TEST_ROOT_DIR: E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\DAIC_WOZ-generated_database_V2\test\clipped_data\
   USE_MEL_SPECTROGRAM: False
   VISUAL_WITH_GAZE: True
   PADDING:
   RESCALE_SIZE:
   CROP_SIZE:
-  BATCH_SIZE: 500  # TODO
+  BATCH_SIZE: 50  # TODO
   NUM_WORKERS: 0  # TODO
 
 MODEL:
   PHQ_THRESHOLD: 10
   EPOCHS: 1
   WEIGHTS:
-    TYPE: new        # ['new', 'last', 'absolute_path', others custom_type]
+    TYPE: absolute_path        # ['new', 'last', 'absolute_path', others custom_type]
     DATE:
     PATH: model_weights
-    NAME: V+Conv2D-BiLSTM+PHQ-Subscores+improve_2024-09-11_081747_f1_score-0.8696.pt
-    CUSTOM_ABSOLUTE_PATH: 
+    NAME: V+Conv2D-BiLSTM+PHQ-Binary_2024-09-12_115920_acc-80.0000.pt
+    CUSTOM_ABSOLUTE_PATH: E:\myworkspace\DepressionEstimation\models\Visual_ConvLSTM\model_weights\V+Conv2D-BiLSTM+PHQ-Binary_2024-10-18_085218_f1_score-0.8276.pt
     INCLUDED: ['visual_net', 'evaluator']
   VISUAL_NET:
     INPUT_DIM: 3
@@ -102,10 +102,10 @@ MODEL:
     NORM: bn          # ['bn', 'wn']: nn.BatchNorm1d, nn.utils.weight_norm
     DROPOUT: 0.6
   EVALUATOR:
-    PREDICT_TYPE: phq-subscores    # ['phq-subscores', 'phq-score', 'phq-binary']
+    PREDICT_TYPE: phq-binary    # ['phq-subscores', 'phq-score', 'phq-binary']
     INPUT_FEATURE_DIM: 256
-    CLASSES_RESOLUTION: 32 
-    N_CLASSES: 4
+    CLASSES_RESOLUTION: 2
+    N_CLASSES: 2
     N_SUBSCORES: 8
     STD: 5
   CRITERION:
