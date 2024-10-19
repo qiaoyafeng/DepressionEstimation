@@ -93,6 +93,8 @@ class DepressionDataset(Dataset):
             gaze_file = np.sort(os.listdir(gaze_path))[idx]
             fkps = np.load(os.path.join(fkps_path, fkps_file))
             gaze = np.load(os.path.join(gaze_path, gaze_file))
+            # 去掉头部相关gaze的参数x_h0,y_h0,z_h0,x_h1,y_h1,z_h1特征，因为最新版的OpenFace没有这些特征，而是gaze_angle_x，gaze_angle_y
+            gaze[:, 2:4, :] = np.zeros((2, 3))
             visual = np.concatenate((fkps, gaze), axis=1)
         else:
             fkps_path = os.path.join(self.root_dir, 'facial_keypoints')
