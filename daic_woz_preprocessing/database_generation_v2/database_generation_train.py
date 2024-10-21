@@ -449,7 +449,7 @@ if __name__ == '__main__':
     np.random.seed(1)
 
     # read training gt file
-    gt_path = r'E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\train_split_Depression_AVEC2017.csv'
+    gt_path = rf'{root}\train_split_Depression_AVEC2017.csv'
     gt_df = pd.read_csv(gt_path) 
 
     # initialization
@@ -470,13 +470,13 @@ if __name__ == '__main__':
         print(f'- PHQ Binary: {phq_binary_gt}, PHQ Score: {phq_score_gt}, Subscore: {phq_subscores_gt}')
 
         # get all files path of participant
-        keypoints_path = f'E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset/{patient_ID}_P/{patient_ID}_CLNF_features3D.txt'
-        gaze_path = f'E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset/{patient_ID}_P/{patient_ID}_CLNF_gaze.txt'
-        AUs_path = f'E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset/{patient_ID}_P/{patient_ID}_CLNF_AUs.txt'
-        pose_path = f'E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset/{patient_ID}_P/{patient_ID}_CLNF_pose.txt'
-        hog_path = f'E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset/{patient_ID}_P/{patient_ID}_CLNF_hog.bin'
-        audio_path = f'E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset/{patient_ID}_P/{patient_ID}_AUDIO.wav'
-        text_path = f'E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset/{patient_ID}_P/{patient_ID}_TRANSCRIPT.csv'
+        keypoints_path = f'{root}/{patient_ID}_P/{patient_ID}_CLNF_features3D.txt'
+        gaze_path = f'{root}/{patient_ID}_P/{patient_ID}_CLNF_gaze.txt'
+        AUs_path = f'{root}/{patient_ID}_P/{patient_ID}_CLNF_AUs.txt'
+        pose_path = f'{root}/{patient_ID}_P/{patient_ID}_CLNF_pose.txt'
+        hog_path = f'{root}/{patient_ID}_P/{patient_ID}_CLNF_hog.bin'
+        audio_path = f'{root}/{patient_ID}_P/{patient_ID}_AUDIO.wav'
+        text_path = f'{root}/{patient_ID}_P/{patient_ID}_TRANSCRIPT.csv'
 
         # read transcipt file
         text_df = pd.read_csv(text_path, sep='\t').fillna('')

@@ -449,7 +449,7 @@ if __name__ == '__main__':
     np.random.seed(1)
 
     # read training gt file
-    gt_path = r'E:\myworkspace\DepressionEstimation\daic_woz_preprocessing\daic_woz_dataset\full_test_split.csv'
+    gt_path = rf'{root}\full_test_split.csv'
     gt_df = pd.read_csv(gt_path) 
 
     # initialization
