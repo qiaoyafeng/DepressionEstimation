@@ -296,7 +296,22 @@ def main(dataloaders, visual_net, evaluator, base_logger, writer, config, args, 
                             'optimizer': optimizer.state_dict(),
                             'best_acc': test_best_acc},
                         file_path)
-                        
+
+        if epoch % 100 == 0:
+            epoch_acc = test_model_acc
+            epoch_f1_score = test_model_f1_score
+            if args.save:
+                timestamp = datetime.utcnow().strftime('%Y-%m-%d_%H%M%S')
+                file_path = os.path.join(ckpt_path, '{}_{}_epoch-{}-acc-{:6.4f}-f1_score-{:6.4f}.pt'.format(model_type, timestamp, epoch, epoch_acc, epoch_f1_score))
+                torch.save({'epoch': epoch,
+                            'visual_net': visual_net.state_dict(),
+                            'evaluator': evaluator.state_dict(),
+                            'optimizer': optimizer.state_dict(),
+                            'best_acc': epoch_acc,
+                            'best_f1_score': epoch_f1_score,
+                            },
+                           file_path)
+
         # update lr with scheduler
         scheduler.step()
                         
@@ -329,7 +344,7 @@ if __name__ == '__main__':
                         type=bool,
                         help='if set true, save the best model',
                         required=False,
-                        default=False)
+                        default=True)
     args = parser.parse_args()
 
     # set up GPU
