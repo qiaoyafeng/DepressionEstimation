@@ -329,7 +329,7 @@ if __name__ == '__main__':
                         type=bool,
                         help='if set true, save the best model',
                         required=False,
-                        default=False)
+                        default=True)
     args = parser.parse_args()
 
     # set up GPU
