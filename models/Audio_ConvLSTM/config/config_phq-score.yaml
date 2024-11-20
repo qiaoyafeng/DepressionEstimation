@@ -65,15 +65,15 @@
 
 OUTPUT_DIR: exp_A+Conv-BiLSTM-1D+PHQ-Score+Mel
 SAVE_CONFIG_NAME: config_A+Conv-BiLSTM-1D+PHQ-Score+Mel.yaml
-CKPTS_DIR: /cvhci/temp/wpingcheng/ckpts_new/  # TODO
-TYPE: A+Conv-BiLSTM-1D+PHQ-Score+Mel  # TODO
+CKPTS_DIR: /root/autodl-tmp/DepressionEstimation/models/Audio_ConvLSTM/model_weights
+TYPE: A+Conv-BiLSTM-1D+PHQ-Score+Mel
 MANUAL_SEED: 1
 LOG_TITLE: Depression Detection with Clipped_Audio(Mel), Conv-BiLSTM-1D, PHQ-Score, CrossEntropy with weights, ASAM # TODO
 
 DATA:
-  TRAIN_ROOT_DIR: /cvhci/temp/wpingcheng/DAIC_WOZ-generated_database_V2/train/clipped_data/
-  VALIDATION_ROOT_DIR: /cvhci/temp/wpingcheng/DAIC_WOZ-generated_database/train/clipped_data/gender_balance
-  TEST_ROOT_DIR: /cvhci/temp/wpingcheng/DAIC_WOZ-generated_database_V2/test/clipped_data/
+  TRAIN_ROOT_DIR: /root/autodl-tmp/DepressionEstimation/daic_woz_preprocessing/daic_woz_dataset/DAIC_WOZ-generated_database_V2/train/clipped_data/
+  VALIDATION_ROOT_DIR: /root/autodl-tmp/DepressionEstimation/daic_woz_preprocessing/daic_woz_dataset/DAIC_WOZ-generated_database_V2/train/clipped_data/gender_balance
+  TEST_ROOT_DIR: /root/autodl-tmp/DepressionEstimation/daic_woz_preprocessing/daic_woz_dataset/DAIC_WOZ-generated_database_V2/test/clipped_data/
   USE_MEL_SPECTROGRAM: True
   VISUAL_WITH_GAZE: False
   PADDING:
